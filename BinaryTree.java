@@ -23,6 +23,22 @@ public class BinaryTree {
         
         
     }
+public static void bfs(){
+    if(root==null)return;
+    ArrayList<Node> ary=new ArrayList<>();
+    ary.add(root);
+    while(!ary.isEmpty()){
+        System.out.print(ary.get(0).data+"-->");
+        if(ary.get(0).left!=null){
+            ary.add(ary.get(0).left);
+        }
+        if(ary.get(0).right!=null){
+            ary.add(ary.get(0).right);
+        }
+        ary.remove(0);
+    }
+    System.out.print("null");
+}
     public static void main(String args[]){
         ArrayList<Node> arr=new ArrayList<>();
         insert(1,arr);
@@ -30,5 +46,6 @@ public class BinaryTree {
         insert(3,arr);
         insert(4,arr);
         insert(5,arr);
+        bfs();
     }
 }

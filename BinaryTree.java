@@ -1,15 +1,4 @@
-import java.util.*;
-class Node{
-    int data;
-    Node left;
-    Node right;
-    Node(int data){
-        this.data=data;
-        this.left=null;
-        this.right=null;
-    }
-}
-
+import java.util.ArrayList;
 public class BinaryTree {
     public static Node root;
     public static void insert(int data, ArrayList<Node> arr){

@@ -41,16 +41,22 @@ public static void inorder(Node node){
     inorder(node.right);
     
 }
-public static boolean search(int key){
-    if(root==null) throw new IllegalArgumentException("tree is empty");
-    if(root.data==key)return true;
-    Node node=root;
-    while (node != null) {
-        if (key == node.data) return true;
-        else if (key < node.data) node = node.left;
-        else node = node.right;
-    }
-    return false;
+// public static boolean search(int key){
+//     if(root==null) throw new IllegalArgumentException("tree is empty");
+//     if(root.data==key)return true;
+//     Node node=root;
+//     while (node != null) {
+//         if (key == node.data) return true;
+//         else if (key < node.data) node = node.left;
+//         else node = node.right;
+//     }
+//     return false;
+// }
+public static boolean search(Node node,int key){
+    if(node==null)return false;
+    if(node.data==key)return true;
+    return (key<node.data)?search(node.left,key):search(node.right,key);
+
 }
 
 public static void main(String args[]){
@@ -60,7 +66,6 @@ public static void main(String args[]){
     insert(15);
     insert(3);
     inorder(root);
-    System.out.println(search(3));
+    System.out.println(search(root,3));
 }
-
 }

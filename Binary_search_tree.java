@@ -1,3 +1,5 @@
+
+import java.util.Stack;
 class Node{
     int data;
     Node left;
@@ -36,36 +38,52 @@ public static void insert(int data){
 }
 public static void inorder(Node node){
     if(node==null)return;
-    System.out.print(node.data+" ");
     inorder(node.left);
+    System.out.print(node.data+" ");
     inorder(node.right);
     
 }
-// public static boolean search(int key){
-//     if(root==null) throw new IllegalArgumentException("tree is empty");
-//     if(root.data==key)return true;
-//     Node node=root;
-//     while (node != null) {
-//         if (key == node.data) return true;
-//         else if (key < node.data) node = node.left;
-//         else node = node.right;
-//     }
-//     return false;
-// }
+
+public static boolean search_iterative(int key){
+    if(root==null) throw new IllegalArgumentException("tree is empty");
+    if(root.data==key)return true;
+    Node node=root;
+    while (node != null) {
+        if (key == node.data) return true;
+        else if (key < node.data) node = node.left;
+        else node = node.right;
+    }
+    return false;
+}
 public static boolean search(Node node,int key){
     if(node==null)return false;
     if(node.data==key)return true;
     return (key<node.data)?search(node.left,key):search(node.right,key);
 
 }
+public static void inorder_stack(){
+    Stack <Node> s=new Stack<>();
+    if(root==null)throw new IllegalArgumentException("tree is empty");
+    Node node=root;
+    while(node!=null ||  !s.isEmpty()){
+        while(node!=null){
+            s.push(node);
+            node=node.left;
+        }
+        node=s.pop();
+        System.out.print(node.data+" ");
+        node=node.right;
+    }
+}
 
 public static void main(String args[]){
-    insert(20);
     insert(10);
-    insert(50);
+    insert(9);
+    insert(8);
     insert(15);
-    insert(3);
-    inorder(root);
-    System.out.println(search(root,3));
+    insert(13);
+    //inorder(root);
+    inorder_stack();
+    //System.out.println(search(root,3));
 }
 }

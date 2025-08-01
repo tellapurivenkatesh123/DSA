@@ -61,6 +61,7 @@ public static boolean search(Node node,int key){
     return (key<node.data)?search(node.left,key):search(node.right,key);
 
 }
+
 public static void inorder_stack(){
     Stack <Node> s=new Stack<>();
     if(root==null)throw new IllegalArgumentException("tree is empty");
@@ -75,7 +76,52 @@ public static void inorder_stack(){
         node=node.right;
     }
 }
+public static void preorder_stack(){
+    Stack <Node> s=new Stack<>();
+    if(root==null)throw new IllegalArgumentException("tree is empty");
+    Node node=root;
+    s.push(node);
+    while(!s.isEmpty()){
+        Node cur=s.pop();
+        System.out.print(cur.data+" ");
 
+        if(cur.right!=null)
+            s.push(cur.right);
+        
+        if(cur.left!=null)
+        s.push(cur.left);
+    }
+}
+public static void preorder(Node node){
+    if(node==null)return;
+    System.out.print(node.data+" ");
+    preorder(node.left);
+    preorder(node.right);
+}
+// public static void postorder_stack(){
+//     if(root==null)throw new IllegalArgumentException("tree is empty");
+//     Node node=root;
+//     Stack<Node> s=new Stack<>();
+//     while(node!=null || !s.isEmpty()){
+//         while(node!=null){
+//             s.push(node);
+//             if(node.right!=null)
+//                     s.push(node.right);
+//             if(node.left!=null)
+//                     node=node.left;
+//         }
+//         Node cur=s.pop();
+//         System.out.print(cur.data+" ");
+//         node=cur;
+//     }
+// }
+
+public static void postorder(Node node){
+    if(node==null)return;
+    postorder(node.left);
+    postorder(node.right);
+    System.out.print(node.data+" ");
+}
 public static void main(String args[]){
     insert(10);
     insert(9);
@@ -83,7 +129,11 @@ public static void main(String args[]){
     insert(15);
     insert(13);
     //inorder(root);
-    inorder_stack();
+    //inorder_stack();
     //System.out.println(search(root,3));
+//preorder(root);
+//preorder_stack();
+// postorder(root);
+postorder_stack();
 }
 }

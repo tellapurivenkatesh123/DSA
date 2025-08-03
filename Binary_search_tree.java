@@ -134,6 +134,6 @@ public static void main(String args[]){
 //preorder(root);
 //preorder_stack();
 // postorder(root);
-postorder_stack();
+//postorder_stack();
 }
 }

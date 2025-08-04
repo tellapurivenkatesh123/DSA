@@ -115,7 +115,30 @@ public static void preorder(Node node){
 //         node=cur;
 //     }
 // }
-
+public static Node findMin(Node n){
+    while(n.left!=null)n=n.left;
+    return n;
+}
+public static Node deletion(Node node,int key){
+    if(root == null)return null;
+    if(key<node.data){
+    node.left=deletion(node.left,key);
+    }
+    else if(key>node.data)
+    {
+        node.right=deletion(node.right,key);
+    }
+    else{
+        if(root.left==null && root.right==null)return null;
+        else if(node.left==null)return node.right;
+        else if(node.right==null)return node.left;
+        Node successor=findMin(node.right);
+        node.data=successor.data;
+        root.right=deletion(node.right,successor.data);
+    }
+    
+return node;
+}
 public static void postorder(Node node){
     if(node==null)return;
     postorder(node.left);
@@ -128,11 +151,17 @@ public static void main(String args[]){
     insert(8);
     insert(15);
     insert(13);
+    insert(12);
+    insert(11);
+    //inorder(root);
+
     //inorder(root);
     //inorder_stack();
     //System.out.println(search(root,3));
-//preorder(root);
-//preorder_stack();
+    preorder(root);
+    deletion(root,10);
+    System.out.println();
+    preorder_stack();
 // postorder(root);
 //postorder_stack();
 }

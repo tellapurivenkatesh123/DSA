@@ -1,0 +1,139 @@
+2. Non-Primitive Data Structures
+
+These are built using primitive data types.
+
+🔹 A. Linear Data Structures
+
+Data is arranged in a sequence (one after another):
+
+Array
+
+Static Array
+
+Dynamic Array (e.g., Vector in C++, ArrayList in Java)
+
+Linked List
+
+Singly Linked List
+
+Doubly Linked List
+
+Circular Linked List
+
+Skip List
+
+Stack
+
+Queue
+
+Simple Queue
+
+Circular Queue
+
+Priority Queue
+
+Deque (Double-ended Queue)
+
+🔹 B. Non-Linear Data Structures
+
+Data is arranged hierarchically or interconnected.
+
+1. Trees
+
+Binary Tree
+
+Binary Search Tree (BST)
+
+AVL Tree (Self-balancing BST)
+
+Red-Black Tree
+
+Splay Tree
+
+B-tree
+
+B+ tree
+
+Trie (Prefix Tree)
+
+Segment Tree
+
+Fenwick Tree (Binary Indexed Tree)
+
+Heap
+
+Min Heap
+
+Max Heap
+
+2. Graphs
+
+Directed Graph
+
+Undirected Graph
+
+Weighted Graph
+
+Unweighted Graph
+
+Cyclic / Acyclic Graph
+
+Tree (special case of graph)
+
+Representations:
+
+Adjacency Matrix
+
+Adjacency List
+
+🧮 3. Hash-Based Data Structures
+
+Used for fast lookups using keys:
+
+Hash Table
+
+Hash Map
+
+Hash Set
+
+📚 4. Specialized / Advanced Data Structures
+
+Used in complex systems and algorithms:
+
+Disjoint Set (Union-Find)
+
+Bloom Filter
+
+Skip List
+
+Suffix Tree / Suffix Array
+
+K-D Tree (for multidimensional data)
+
+Quad Tree / Octree (for spatial data)
+
+Graph-based Trees (like A* Search Trees)
+
+LRU Cache (uses Linked List + Hash Map)
+
+Patricia Tree (Compressed Trie)
+
+Sparse Table
+
+💾 5. Abstract Data Types (ADT)
+
+These define what operations can be performed, not how:
+
+List
+
+Stack
+
+Queue
+
+Map
+
+Set
+
+Graph
+
+Tree

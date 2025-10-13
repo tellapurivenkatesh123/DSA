@@ -10,7 +10,7 @@ Date:2-august-2025(sat)
 Dear repository:
 
 
- I am fine (forced to say fine) i hope your a doing well toady i don't have anything to share with you but i am commited towards the work.
+ I am fine i hope your a doing well toady i don't have anything to share with you but i am commited towards the work.
                                                                                                                     
  yours lovingly                                                                                                     
  Tellapuri Venkatesh

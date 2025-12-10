@@ -13,7 +13,7 @@
 // //     return (int) Math.log10(num)+1;
 // //  }
 // // ----------------------------------------------------------------------------------------------------------------------------------------
-// // private static int reverseInt(int num){ 
+// // private static int reverseInt(int num){
 // //     int digit=0;
 // //     while(num>0){
 // //         int rem=num%10;
@@ -154,7 +154,7 @@
 // //      .forEach(i->sum.value +=i);
 // //     return sum.value;
 // // }
-// public static void main(String args[]){
+//public static void main(String args[]){
 // // int count=countDigit(100);
 // // int count=countDigit1(101);
 // // int count = reverseInt(100);

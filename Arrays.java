@@ -7,7 +7,7 @@
 //         num[pos]=data;
 //     }
 //     public static void print(int[] num){
-//         for(int i=0;i<num.length;i++)System.out.print(num[i]);
+//         for(int i=0;i<num.length;i++)System.out.print(num[i]+" ");
 //     }
 
 // public static void main(String args[]){
@@ -18,7 +18,7 @@
 // insert(2,2,num,i);
 // insert(3,3,num,i);
 // insert(4,4,num,i);
-// // insert(1,5,num,i);
+// insert(1,5,num,i);
 // print(num);
-//     }
-// }
+//    }
+//  }

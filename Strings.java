@@ -61,7 +61,45 @@ public class Strings {
         return new String(arr);
     }
     
-
+// public static String longestPalindrome(String s){
+//     //check whether the string is empty;
+//     if(s==null || s.length()==0) return s;
+//     //transform the string into character array by separating with symbols;
+//     char[] t=new char[2*s.length()+3];
+//     t[0]='^';
+//     int index=1;
+//     for(int i=0;i<s.length();i++){
+//         t[index++]='#';
+//         t[index++]=s.charAt(i);
+//     }
+//     t[index++]='#';
+//     t[index++]='$';
+// // initialize new array to store the maximum length
+// int p[]=new int[t.length];
+// // initialize center and right
+// int center=0,right=0;
+// for(int i=1;i<t.length-1;i++){
+//     //initialize mirror;
+//     int mirror=2*center-i;
+//     if(i<right)
+//         p[i]=Math.min(right-i,p[mirror]);
+//     while (t[i+p[i]+1]==t[i-p[i]-1])
+//         p[i]++;
+//     if(i+p[i]>right){
+//         center=i;
+//         right=i+p[i];
+//     }
+// }
+//     int maxlen=0,cur_index=0;
+//     for(int i=1;i<p.length-1;i++){
+//         if(p[i]>maxlen){
+//             maxlen=p[i];
+//             cur_index=i;
+//         }
+//     }
+//     int start=(cur_index-maxlen)/2;
+// return s.substring(start,start+maxlen);
+// }
     public static void main(String[] args) {
       // String st= rightrotate("abcd", 1);
       //String str=rr("ael");
@@ -69,6 +107,8 @@ public class Strings {
     //System.out.println(vowels("ae"));
     // String str="$@#";
     // str=rightrotation(str,10);
+    // System.out.println(str);
+    // String str=longestPalindrome("abbabb");
     // System.out.println(str);
     }
 }
